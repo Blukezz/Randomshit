@@ -1,6 +1,6 @@
-local Libary = {}
+local LunarFeLib = {}
 
-function Libary:CreateWindow(dfghni)
+function LunarFeLib:CreateGui()
 	local LunarFe = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
