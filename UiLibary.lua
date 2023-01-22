@@ -715,4 +715,5 @@ function LunarFeLib:CreateGui()
 		end
 		return Tab
 	end
+	return Window
 end
