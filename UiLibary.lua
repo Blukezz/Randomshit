@@ -21,9 +21,8 @@ function LunarFeLib:CreateGui()
 	local UIGradient = Instance.new("UIGradient")
 	local MainFrame = Instance.new("Frame")
 	local UICorner_5 = Instance.new("UICorner")
-	local UIListLayout_2 = Instance.new("UIListLayout")
-	local UIPadding_2 = Instance.new("UIPadding")
 	local UIStroke_8 = Instance.new("UIStroke")
+	local idkk = false
 
 	--Properties:
 
@@ -318,12 +317,22 @@ function LunarFeLib:CreateGui()
 
 	local Window = {}
 	function Window:CreateTab(name, icon)
+		local gerjig
+		
+		for i, v in pairs(MainFrame:GetDescendants()) do
+			if v:IsA("ScrollingFrame") and v.Name ~= "foo" then
+				gerjig = false
+			end
+		end
+		
 		local TabButton = Instance.new("TextButton")
 		local UIStroke_4 = Instance.new("UIStroke")
 		local UICorner_4 = Instance.new("UICorner")
 		local ImageLabel = Instance.new("ImageLabel")
 		local TextLabel = Instance.new("TextLabel")
 		local foo = Instance.new("ScrollingFrame")
+		local UIListLayout_2 = Instance.new("UIListLayout")
+		local UIPadding_2 = Instance.new("UIPadding")
 
 		foo.Name = name
 		foo.Parent = MainFrame
@@ -335,6 +344,7 @@ function LunarFeLib:CreateGui()
 		foo.Position = UDim2.new(0.507050574, 0, 0.499722838, 0)
 		foo.Size = UDim2.new(0, 350, 0, 231)
 		foo.ScrollBarThickness = 0
+		foo.Visible = gerjig
 
 		UIListLayout_2.Parent = foo
 		UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -436,6 +446,8 @@ function LunarFeLib:CreateGui()
 			local UICorner_6 = Instance.new("UICorner")
 			local UIStroke_5 = Instance.new("UIStroke")
 			local TextLabel_2 = Instance.new("TextLabel")
+			
+			
 
 			TextButton.Parent = foo
 			TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
