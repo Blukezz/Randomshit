@@ -1,6 +1,6 @@
 local KeySystem = {}
 
-function KeySystem:Create(keyy, call)
+function KeySystem:Create(keyy, calll, call)
 	local LunarFeKeysttem = Instance.new("ScreenGui")
 	local KeySystem = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -171,7 +171,8 @@ function KeySystem:Create(keyy, call)
 	TextBox.Size = UDim2.new(0, 178, 0, 32)
 	TextBox.ClearTextOnFocus = false
 	TextBox.Font = Enum.Font.SourceSans
-	TextBox.Text = "ygjhukhu"
+	TextBox.Text = ""
+	TextBox.PlaceholderText = "key"
 	TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextBox.TextScaled = true
 	TextBox.TextSize = 14.000
@@ -400,6 +401,18 @@ function KeySystem:Create(keyy, call)
 		local Tween2 = TweenService:Create(btn, TweenInfomation1, { BackgroundTransparency = 1 })
 		local Tween3 = TweenService:Create(btn, TweenInfomation1, { BackgroundTransparency = 0 })
 
+		local Tween20 = TweenService:Create(btn.Parent.Parent.SplashScreen, TweenInfomation, { BackgroundTransparency = 0 })
+		local Tween30 = TweenService:Create(btn.Parent.Parent.SplashScreen.ImageLabel, TweenInfomation, { ImageTransparency = 0 })
+		local Tween40 = TweenService:Create(btn.Parent.Parent.SplashScreen.TextLabel, TweenInfomation, { TextTransparency = 0 })
+		local Tween50 = TweenService:Create(btn.Parent.Parent.SplashScreen.TextLabel1, TweenInfomation, { TextTransparency = 0 })
+
+		local Tween2_ = TweenService:Create(btn.Parent.Parent.SplashScreen, TweenInfomation, { BackgroundTransparency = 1 })
+		local Tween3_ = TweenService:Create(btn.Parent.Parent.SplashScreen.ImageLabel, TweenInfomation, { ImageTransparency = 1 })
+		local Tween4_ = TweenService:Create(btn.Parent.Parent.SplashScreen.TextLabel, TweenInfomation, { TextTransparency = 1 })
+		local Tween5_ = TweenService:Create(btn.Parent.Parent.SplashScreen.TextLabel1, TweenInfomation, { TextTransparency = 1 })
+		local Tween6_ = TweenService:Create(btn.Parent.Parent.Parent.KeySystem, TweenInfomation, { BackgroundTransparency = 1 })
+		local Tween7_ = TweenService:Create(btn.Parent.Parent.Parent.KeySystem.UIStroke, TweenInfomation, { Transparency = 1 })
+
 		btn.MouseEnter:Connect(function()
 			Tween:Play()
 		end)
@@ -416,11 +429,33 @@ function KeySystem:Create(keyy, call)
 			Tween3:Play()
 
 			if btn.Parent.KeyBoxFrame.TextBox.Text == keyy then
+				Tween20:Play()
+				wait(0.1)
+				Tween30:Play()
+				Tween40:Play()
+				Tween50:Play()
+				wait(1)
+				for i, v in pairs(btn.Parent.Parent.Branding:GetChildren()) do
+					v.Visible = false
+				end
+
+				for i, v in pairs(btn.Parent.Parent.Key:GetChildren()) do
+					v.Visible = false
+				end
+				Tween2_:Play()
+				Tween3_:Play()
+				Tween4_:Play()
+				Tween5_:Play()
+				Tween6_:Play()
+				Tween7_:Play()
+				wait(0.3)
+				btn.Parent.Parent.Parent.KeySystem.Visible = false
 				pcall(call)
 			end
 		end)
 	end
 	coroutine.wrap(KUGKCB_fake_script)()
+	
 	local function ACAEMF_fake_script() -- GetKey.LocalScript 
 		local script = Instance.new('LocalScript', GetKey)
 
@@ -448,9 +483,11 @@ function KeySystem:Create(keyy, call)
 
 		btn.MouseButton1Up:Connect(function()
 			Tween3:Play()
+			pcall(calll)
 		end)
-	end
+		end
 	coroutine.wrap(ACAEMF_fake_script)()
+	
 	local function EJJBQ_fake_script() -- Hide.LocalScript 
 		local script = Instance.new('LocalScript', Hide)
 
