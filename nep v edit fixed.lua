@@ -5149,7 +5149,7 @@ if not OldModel then
 	Model0.Transparency = 1
 end
 
-game:GetService("Players").LocalPlayer.Character["Back_AccAccessory"].Handle.att1_Handle.Parent = Part475
+game:GetService("Players").LocalPlayer.Character["MeshPartAccessory"].Handle.att1_Handle.Parent = Part475
 Part475.att1_Handle.Rotation = Vector3.new(-45,-100,0)
 Part475.att1_Handle.Position = Vector3.new(-0,-1.5,0.25)
 
