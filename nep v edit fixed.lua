@@ -7,7 +7,7 @@ loadstring(game:HttpGet(("https://pastebin.com/raw/NJaKNq49"),true))() --esta us
 ----- the hats name on explorer/dex (not name in catalog)
 local NoSound = false ----- sound or no sound (Background Music)
 local OldModel = true ----- don't put this on false.
-local ToolName = "Back_AccAccessory" ----- the hats name on explorer/dex (not name in catalog)
+local ToolName = "MeshPartAccessory" ----- the hats name on explorer/dex (not name in catalog)
 --ToolName.Parent = game:GetService("Players").LocalPlayer.Character
 local playerss = game:GetService("Players").LocalPlayer.Character
 local maybe = playerss[ToolName].Handle
