@@ -1,4 +1,4 @@
- --loadstring(game:HttpGet('https://pastebin.com/raw/tNA5Y47K'))() --reanim malo XD si quieres ponle este: 
+ --loadstring(game:HttpGet('https://raw.githubusercontent.com/Blukezz/Randomshit/main/reanimate.lua'))() --reanim malo XD si quieres ponle este: 
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/Blukezz/Randomshit/main/unbrella%20fling.lua"),true))() --esta usa vans_umbrella como fling
 --peldon ultra skidded pero no te voy a hacer leaks a scripts valiosos como el andfrix dummy y los otros raros scripts q me pasaste :V o el nep v switcher q tas haciendo 
 
