@@ -3,6 +3,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/Blukezz/Randomshit/m
 --peldon ultra skidded pero no te voy a hacer leaks a scripts valiosos como el andfrix dummy y los otros raros scripts q me pasaste :V o el nep v switcher q tas haciendo 
 
 --es q taba muy bueno tu fixed script 😳
+-- corn
 
 ----- the hats name on explorer/dex (not name in catalog)
 local NoSound = false ----- sound or no sound (Background Music)
