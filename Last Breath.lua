@@ -84,6 +84,70 @@ local Hat5 = Welcome:CreateLabel("Chestnut Bun")
         loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Krystal%20Dances%20V2%20Convert.lua'))()
     end,
  })
+ local KrystalDanceV1 = Scripts:CreateButton({
+    Name = "Krystal Dance V1",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Undertale%20Sans%20Convert.lua'))()
+    end,
+ })
+ local Xester = Scripts:CreateButton({
+    Name = "Xester",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Xester%20Convert.lua'))()
+    end,
+ })
+ local Sonic = Scripts:CreateButton({
+    Name = "Sonic",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Sonic%20The%20Hedehog%20Convert.lua'))()
+    end,
+ })
+ local Sans = Scripts:CreateButton({
+    Name = "Sans",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Undertale%20Sans%20Convert.lua'))()
+    end,
+ })
+ local ServerAdmin = Scripts:CreateButton({
+    Name = "Server Admin",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Server%20Admin%20Convert.lua'))()
+    end,
+ })
+ local MagicUnknown = Scripts:CreateButton({
+    Name = "Magic Unknown",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Magic%20Unknown%20Convert.lua'))()
+    end,
+ })
+ local NebulaGlitcher = Scripts:CreateButton({
+    Name = "Nebula Glitcher",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Nebula%20Star%20Glitcher%20Convert.lua'))()
+    end,
+ })
+ local TheDistorted = Scripts:CreateButton({
+    Name = "The Distorted",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/The%20Distorted%20Convert.lua'))()
+    end,
+ })
 
  local HatsSection = Scripts:CreateSection("-- [ Hats Required ] --")
  local NepV = Scripts:CreateButton({
