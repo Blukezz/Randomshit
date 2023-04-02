@@ -42,10 +42,12 @@ local Window = Rayfield:CreateWindow({
     end,
  })
  local HatListSection = Welcome:CreateSection("-- [ Hats ] --")
- local HatList = Welcome:CreateParagraph({
-    Title = "", 
-    Content = "Vans Black White Checkerboard Umbrella (Get at beach in vans world), Roblox Girl Hair,  Lavender Updo, Brown Hair, Pal Hair, Red Roblox Cap, Chestnut Bun"
-})
+local Hat = Welcome:CreateLabel("Vans Black White Checkerboard Umbrella (Search on yt to find out how to get)")
+local Hat1 = Welcome:CreateLabel("Roblox Girl Hair")
+local Hat2 = Welcome:CreateLabel("Lavender Updo")
+local Hat3 = Welcome:CreateLabel("Brown Hair")
+local Hat4 = Welcome:CreateLabel("Red Roblox Cap")
+local Hat5 = Welcome:CreateLabel("Chestnut Bun")
 
  local Scripts = Window:CreateTab("Scripts", 11419703033)
 
@@ -54,14 +56,32 @@ local Window = Rayfield:CreateWindow({
     Name = "Gale",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Gale%20Fighter%20Convert.lua'))()
     end,
  })
- local Gale = Scripts:CreateButton({
+ local Ender = Scripts:CreateButton({
     Name = "Ender",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Ender%20Convert.lua'))()
+    end,
+ })
+ local Chill = Scripts:CreateButton({
+    Name = "Chill",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Chill%20Convert.lua'))()
+    end,
+ })
+ local KrystalDanceV2 = Scripts:CreateButton({
+    Name = "Krystal Dance V2",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Krystal%20Dances%20V2%20Convert.lua'))()
     end,
  })
 
@@ -79,9 +99,10 @@ local Window = Rayfield:CreateWindow({
     end,
  })
  local Abyss Eye = Scripts:CreateButton({
-    Name = "Abyss Eye",
+    Name = "Abyss Eye (Demonic Sword)",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Reanimation/Mizt%20Reanimation.lua'))()
+        wait(.5)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/specowos/CONVERTWARE/main/convertware/Scripts/Converted/Abyss%20Eye%20Demonic%20Convert.lua'))()
     end,
  })
