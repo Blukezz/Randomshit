@@ -6,7 +6,7 @@ game.Players.LocalPlayer.Character["LavanderHair"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["Robloxclassicred"].Handle.Mesh:Destroy()
 --game.Players.LocalPlayer.Character["Surfboard"].Handle.Handle:Destroy()
 game.Players.LocalPlayer.Character["VANS_Umbrella"].Handle.Mesh:Destroy()
-game.Players.LocalPlayer.Character["VANS_Umbrella"].Handle.Transparency =  0.6
+game.Players.LocalPlayer.Character["VANS_Umbrella"].Handle.Transparency =  0.8
 
 
 local c = game.Players.LocalPlayer.Character
