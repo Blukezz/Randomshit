@@ -977,7 +977,23 @@ for i,v in pairs (char:GetChildren()) do
 	end
 end
 
-wait(7)
+wait(2)
+
+if Global.Noclip then
+	function NoClip()
+	Clip = false
+	wait(0.1)
+	local function NoclipLoop()
+		if Clip == false and c ~= nil then
+			for _, child in pairs(c:GetDescendants()) do
+				if child:IsA("BasePart") and child.CanCollide == true then
+					child.CanCollide = false
+				end
+			end
+		end
+	end
+	Noclipping = game:GetService('RunService').Stepped:Connect(NoclipLoop)
+end
 
 if Global.CameraMovement then
     local UserInputService = game:GetService("UserInputService")
