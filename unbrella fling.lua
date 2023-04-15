@@ -978,4 +978,4 @@ end
 
 wait(7)
 
-game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character:WaitForChild("Torso")
+game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character:WaitForChild("Head")
