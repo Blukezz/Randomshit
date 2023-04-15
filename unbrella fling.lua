@@ -1,3 +1,4 @@
+local Global = getgenv and getgenv() or shared
 game.Players.LocalPlayer.Character["Hat1"].Handle.Mesh:Destroy()
 game.Players.LocalPlayer.Character["Pal Hair"].Handle.Mesh:Destroy() --Pink Hair
 game.Players.LocalPlayer.Character["Pink Hair"].Handle.Mesh:Destroy()
@@ -978,4 +979,13 @@ end
 
 wait(7)
 
-game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character:WaitForChild("Head")
+if Global.CameraMovement then
+    local UserInputService = game:GetService("UserInputService")
+    while wait(1) do
+        if UserInputService.MouseBehavior ~= Enum.MouseBehavior.LockCenter then
+            game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character:WaitForChild("Head")
+        else
+            game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+        end
+    end
+end
