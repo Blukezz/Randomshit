@@ -975,3 +975,7 @@ for i,v in pairs (char:GetChildren()) do
 		v.Handle.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
 	end
 end
+
+wait(7)
+
+game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character:WaitForChild("Torso")
