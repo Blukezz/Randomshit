@@ -169,8 +169,6 @@ function Ovis:CreateWindow(TitleText, AccentColorColor, Keybind)
 
 	-- Scripts:
 	
-	coroutine.wrap(VADSD_fake_script)()
-	
 	local function VQSD_fake_script() -- Main.Drag 
 		local script = Instance.new('LocalScript', Main)
 
