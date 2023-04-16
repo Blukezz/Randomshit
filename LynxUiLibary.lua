@@ -2488,42 +2488,4 @@ function Ovis:CreateWindow(TitleText, AccentColorColor)
 	return Window
 end
 
-local Window = Ovis:CreateWindow("Ovis", Color3.fromRGB(0, 136, 255))
-local home = Window:CreateHome("Home", "12661441973", "LOL")
-local change = home:NewChange("EEEEEEE")
-local tab = Window:CreateTab("Scripts", "11419703033")
-local label = tab:CreateLabel("SUP")
-local button = tab:CreateButton("Button Button", "AAAAAAAAAAAAAAAAAAAAAAAA", "cLICK", function()
-	print("clicked")
-end)
-local dropdown = tab:CreateDropdown({
-	Name = "AAAA",
-	Desc = "AAAAAAAAAA",
-	Objects = {"lol", "corn", "bruh"},
-	DefaultSelection = "lol",
-	Callback = function(Value)
-		print(Value)
-	end,
-})
-local toggle = tab:CreateToggle({
-	Name = "AAAAAAAAA",
-	Desc = "AAAAAAAAAAAAAAAAAAAA",
-	Default = false,
-	Callback = function(Value)
-		print(Value)
-	end,
-})
-local slider = tab:CreateSlider({
-	Name = "AAA",
-	Desc = "AAAAAAAAAAAA",
-	SnapAmount = "10",
-	Range = {0, 100},
-	DefaultValue = "50",
-	Callback = function(Value)
-		print(Value)
-	end,
-})
-local input = tab:CreateInput("AAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "69", function(Value)
-	print(Value)
-end)
 return Ovis -- return the library (for the loadstring)
