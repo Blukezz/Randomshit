@@ -1,12 +1,12 @@
 local Ovis = {}
 
-function Ovis:CreateWindow(TitleText, AccentColorColor)
+function Ovis:CreateWindow(TitleText, AccentColorColor, Keybind)
 	local Spectre = Instance.new("ScreenGui")
 	local Main = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
 	local Tabs = Instance.new("Frame")
 	local TopBar = Instance.new("Folder")
-	local Close = Instance.new("ImageLabel")
+	local Close = Instance.new("ImageButton")
 	local Title = Instance.new("TextLabel")
 	local DragFrame = Instance.new("Frame")
 	local TabButtons = Instance.new("ScrollingFrame")
@@ -59,7 +59,43 @@ function Ovis:CreateWindow(TitleText, AccentColorColor)
 	Close.Size = UDim2.new(0, 19, 0, 19)
 	Close.Image = "http://www.roblox.com/asset/?id=6031094678"
 	Close.ImageColor3 = Color3.fromRGB(150, 150, 150)
+	
 
+	local GuiOpen = true
+
+	Close.MouseButton1Click:Connect(function()
+		if GuiOpen == true then
+			Main.Visible = false
+			GuiOpen = false
+			game:GetService("StarterGui"):SetCore("SendNotification",{
+				Title = "Interface Hidden", -- Required
+				Text = "Please use "..Keybind.."to reopen.", -- Required
+				Icon = "rbxassetid://1234567890" -- Optional
+			})
+		end
+	end)
+	
+	local UIS = game:GetService("UserInputService")
+
+	UIS.InputBegan:Connect(function(Input, IsTyping)
+		if IsTyping then return end
+		if Input.KeyCode == Enum.KeyCode[Keybind] then
+			if GuiOpen == true then
+				Main.Visible = false
+				GuiOpen = false
+				game:GetService("StarterGui"):SetCore("SendNotification",{
+					Title = "Interface Hidden", -- Required
+					Text = "Please use "..Keybind.."to reopen.", -- Required
+					Icon = "rbxassetid://1234567890" -- Optional
+				})
+			else
+				Main.Visible = true
+				GuiOpen = true
+			end
+		end
+	end)
+	
+	
 	Title.Name = TitleText
 	Title.Parent = TopBar
 	Title.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -132,7 +168,9 @@ function Ovis:CreateWindow(TitleText, AccentColorColor)
 	UICorner_32.Parent = Thing
 
 	-- Scripts:
-
+	
+	coroutine.wrap(VADSD_fake_script)()
+	
 	local function VQSD_fake_script() -- Main.Drag 
 		local script = Instance.new('LocalScript', Main)
 
@@ -1078,6 +1116,8 @@ function Ovis:CreateWindow(TitleText, AccentColorColor)
 			local TweenInfomation = TweenInfo.new(0.2, Enum.EasingStyle.Linear)
 			local TweenInfomation1 = TweenInfo.new(0.1, Enum.EasingStyle.Linear)
 			local accentcolor = script.Parent.Parent.Parent.Parent.Parent.AccentColor.BackgroundColor3
+			
+			script.Parent.Parent.Frame1.BackgroundColor3 = accentcolor
 
 			script.Parent.MouseEnter:Connect(function()
 				TweenService:Create(script.Parent, TweenInfomation, { BackgroundTransparency = 0 }):Play()
@@ -2487,5 +2527,4 @@ function Ovis:CreateWindow(TitleText, AccentColorColor)
 	end
 	return Window
 end
-
-return Ovis -- return the library (for the loadstring)
+return Ovis
